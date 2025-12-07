@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Portfolio | Innovate Tech-Africa</title>
+    <meta
+      name="description"
+      content="Explore our successful projects and case studies across IT solutions, strategic consulting, and leadership development in Africa."
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-container">
+            <i class="fas fa-rocket brand-icon"></i>
+            <span class="brand-text">
+              <span class="brand-main">INNOVATE</span>
+              <span class="brand-sub">TECH-AFRICA</span>
+            </span>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary nav-btn" href="contact.html"
+                >Get Quote</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="page-title">Our Portfolio</h1>
+            <p class="page-subtitle">
+              Showcasing successful projects and transformative solutions
+              delivered across Africa
+            </p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Portfolio
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter-section py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">
+                All Projects
+              </button>
+              <button class="filter-btn" data-filter="it">IT Solutions</button>
+              <button class="filter-btn" data-filter="consulting">
+                Strategic Consulting
+              </button>
+              <button class="filter-btn" data-filter="leadership">
+                Leadership Development
+              </button>
+              <button class="filter-btn" data-filter="training">
+                Skills Training
+              </button>
+              <button class="filter-btn" data-filter="innovation">
+                Innovation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid section-padding">
+      <div class="container">
+        <div class="row g-4" id="portfolio-container">
+          <!-- Project 1 - IT Solutions -->
+          <div class="col-md-6 col-lg-4 portfolio-item" data-category="it">
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="E-commerce Platform Development"
+                  class="img-fluid"
+                />
+                <div class="portfolio-overlay">
+                  <a
+                    href="#"
+                    class="portfolio-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal1"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </a>
+                </div>
+                <div class="portfolio-category">IT Solutions</div>
+              </div>
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">
+                  E-commerce Platform for AgroTech Africa
+                </h3>
+                <p class="portfolio-description">
+                  Developed a comprehensive e-commerce platform connecting
+                  farmers with buyers across East Africa.
+                </p>
+                <div class="portfolio-meta">
+                  <span><i class="fas fa-calendar"></i> 2023</span>
+                  <span
+                    ><i class="fas fa-map-marker-alt"></i> Kenya, Uganda</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 - Strategic Consulting -->
+          <div
+            class="col-md-6 col-lg-4 portfolio-item"
+            data-category="consulting"
+          >
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Business Strategy Development"
+                  class="img-fluid"
+                />
+                <div class="portfolio-overlay">
+                  <a
+                    href="#"
+                    class="portfolio-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal2"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </a>
+                </div>
+                <div class="portfolio-category">Strategic Consulting</div>
+              </div>
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">
+                  Strategic Transformation for East Africa Bank
+                </h3>
+                <p class="portfolio-description">
+                  Led a comprehensive strategic review and transformation
+                  program for regional banking expansion.
+                </p>
+                <div class="portfolio-meta">
+                  <span><i class="fas fa-calendar"></i> 2022-2023</span>
+                  <span><i class="fas fa-map-marker-alt"></i> East Africa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 - Leadership Development -->
+          <div
+            class="col-md-6 col-lg-4 portfolio-item"
+            data-category="leadership"
+          >
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Leadership Training Program"
+                  class="img-fluid"
+                />
+                <div class="portfolio-overlay">
+                  <a
+                    href="#"
+                    class="portfolio-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal3"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </a>
+                </div>
+                <div class="portfolio-category">Leadership Development</div>
+              </div>
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">
+                  Executive Leadership Program for Tech Companies
+                </h3>
+                <p class="portfolio-description">
+                  6-month leadership development program for 50+ executives
+                  across African tech companies.
+                </p>
+                <div class="portfolio-meta">
+                  <span><i class="fas fa-calendar"></i> 2023</span>
+                  <span
+                    ><i class="fas fa-map-marker-alt"></i> Nigeria, Ghana,
+                    Kenya</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 - Skills Training -->
+          <div
+            class="col-md-6 col-lg-4 portfolio-item"
+            data-category="training"
+          >
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Digital Skills Training"
+                  class="img-fluid"
+                />
+                <div class="portfolio-overlay">
+                  <a
+                    href="#"
+                    class="portfolio-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal4"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </a>
+                </div>
+                <div class="portfolio-category">Skills Training</div>
+              </div>
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">
+                  Digital Skills Training for Youth
+                </h3>
+                <p class="portfolio-description">
+                  Trained 500+ youth in digital skills across 3 African
+                  countries in partnership with NGOs.
+                </p>
+                <div class="portfolio-meta">
+                  <span><i class="fas fa-calendar"></i> 2022</span>
+                  <span
+                    ><i class="fas fa-map-marker-alt"></i> Rwanda, Tanzania,
+                    Uganda</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 - Innovation -->
+          <div
+            class="col-md-6 col-lg-4 portfolio-item"
+            data-category="innovation"
+          >
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Fintech Innovation Lab"
+                  class="img-fluid"
+                />
+                <div class="portfolio-overlay">
+                  <a
+                    href="#"
+                    class="portfolio-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal5"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </a>
+                </div>
+                <div class="portfolio-category">Innovation</div>
+              </div>
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">Fintech Innovation Lab Setup</h3>
+                <p class="portfolio-description">
+                  Established an innovation lab for a leading bank to develop
+                  and test new fintech solutions.
+                </p>
+                <div class="portfolio-meta">
+                  <span><i class="fas fa-calendar"></i> 2023</span>
+                  <span><i class="fas fa-map-marker-alt"></i> Kenya</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 - IT Solutions -->
+          <div class="col-md-6 col-lg-4 portfolio-item" data-category="it">
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="portfolio-image">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Hospital Management System"
+                  class="img-fluid"
+                />
+                <div class="portfolio-overlay">
+                  <a
+                    href="#"
+                    class="portfolio-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectModal6"
+                  >
+                    <i class="fas fa-expand"></i>
+                  </a>
+                </div>
+                <div class="portfolio-category">IT Solutions</div>
+              </div>
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">
+                  Hospital Management System Implementation
+                </h3>
+                <p class="portfolio-description">
+                  Custom hospital management system for a chain of 10 healthcare
+                  facilities across West Africa.
+                </p>
+                <div class="portfolio-meta">
+                  <span><i class="fas fa-calendar"></i> 2022-2023</span>
+                  <span
+                    ><i class="fas fa-map-marker-alt"></i> Ghana, Nigeria</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <button class="btn btn-outline-primary btn-lg" id="loadMore">
+            <i class="fas fa-spinner me-2"></i>Load More Projects
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Success Stories -->
+    <section class="success-stories section-padding bg-light">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-subtitle">Impact Stories</span>
+          <h2 class="section-title">
+            Client <span class="highlight">Success Stories</span>
+          </h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="success-card">
+              <div class="success-header">
+                <div class="client-logo">
+                  <i class="fas fa-building"></i>
+                </div>
+                <div class="client-info">
+                  <h4>East Africa Bank</h4>
+                  <p>Financial Services</p>
+                </div>
+                <div class="success-metrics">
+                  <span class="metric">
+                    <strong>45%</strong>
+                    <small>Growth</small>
+                  </span>
+                </div>
+              </div>
+              <div class="success-body">
+                <p>
+                  "Through strategic consulting and leadership development, we
+                  achieved 45% growth in our regional operations within 18
+                  months. Innovate Tech-Africa's expertise was instrumental in
+                  our expansion."
+                </p>
+                <div class="success-tags">
+                  <span class="tag">Strategic Consulting</span>
+                  <span class="tag">Leadership Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="success-card">
+              <div class="success-header">
+                <div class="client-logo">
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <div class="client-info">
+                  <h4>AgroTech Africa</h4>
+                  <p>Agriculture Technology</p>
+                </div>
+                <div class="success-metrics">
+                  <span class="metric">
+                    <strong>300%</strong>
+                    <small>Online Sales</small>
+                  </span>
+                </div>
+              </div>
+              <div class="success-body">
+                <p>
+                  "The e-commerce platform developed by Innovate Tech-Africa
+                  increased our online sales by 300%. Their understanding of
+                  African markets and technical expertise was exceptional."
+                </p>
+                <div class="success-tags">
+                  <span class="tag">E-commerce</span>
+                  <span class="tag">Digital Marketing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8" data-aos="zoom-in">
+            <h2 class="cta-title">Ready to Start Your Project?</h2>
+            <p class="cta-text">
+              Let's create something amazing together. Contact us to discuss
+              your project requirements.
+            </p>
+            <div class="cta-buttons mt-4">
+              <a href="contact.html" class="btn btn-light btn-lg me-3">
+                <i class="fas fa-paper-plane me-2"></i>Start Project
+              </a>
+              <a href="services.html" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-concierge-bell me-2"></i>Explore Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Modals -->
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="projectModal1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">E-commerce Platform for AgroTech Africa</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+              alt="Project Details"
+              class="img-fluid mb-4"
+            />
+            <h6>Project Overview</h6>
+            <p>
+              Developed a comprehensive e-commerce platform connecting farmers
+              with buyers across East Africa. The platform features real-time
+              inventory management, mobile payments, logistics integration, and
+              multilingual support.
+            </p>
+
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <h6>Technologies Used</h6>
+                <ul>
+                  <li>React.js Frontend</li>
+                  <li>Node.js Backend</li>
+                  <li>MongoDB Database</li>
+                  <li>M-Pesa Integration</li>
+                  <li>AWS Hosting</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6>Key Results</h6>
+                <ul>
+                  <li>300% increase in online sales</li>
+                  <li>5000+ registered farmers</li>
+                  <li>20000+ monthly transactions</li>
+                  <li>99.9% platform uptime</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a href="contact.html" class="btn btn-primary"
+              >Start Similar Project</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="footer-brand mb-3">
+              <i class="fas fa-rocket brand-icon"></i>
+              <span class="brand-text">
+                <span class="brand-main">INNOVATE</span>
+                <span class="brand-sub">TECH-AFRICA</span>
+              </span>
+            </div>
+            <p class="footer-text">
+              Empowering African businesses with innovative technology solutions
+              and strategic consulting for sustainable growth.
+            </p>
+            <div class="social-links mt-4">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fas fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html"
+                  ><i class="fas fa-chevron-right"></i> Services</a
+                >
+              </li>
+              <li>
+                <a href="portfolio.html"
+                  ><i class="fas fa-chevron-right"></i> Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-chevron-right"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h5 class="footer-title">Our Services</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="services.html#it-solutions"
+                  ><i class="fas fa-chevron-right"></i> IT Solutions</a
+                >
+              </li>
+              <li>
+                <a href="services.html#strategic-consulting"
+                  ><i class="fas fa-chevron-right"></i> Strategic Consulting</a
+                >
+              </li>
+              <li>
+                <a href="services.html#leadership-development"
+                  ><i class="fas fa-chevron-right"></i> Leadership
+                  Development</a
+                >
+              </li>
+              <li>
+                <a href="services.html#skills-training"
+                  ><i class="fas fa-chevron-right"></i> Skills Training</a
+                >
+              </li>
+              <li>
+                <a href="services.html#innovation"
+                  ><i class="fas fa-chevron-right"></i> Innovation Solutions</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-title">Contact Info</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya | Kampala, Uganda | Lagos, Nigeria</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>+254 700 123 456</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>info@innovatetechafrica.com</span>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <span>Mon - Fri: 8:00 - 17:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="copyright">
+              &copy; 2024 Innovate Tech-Africa. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Sitemap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/portfolio-filter.js"></script>
+
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        offset: 100,
+        once: true,
+      });
+
+      // Load More Projects
+      document
+        .getElementById("loadMore")
+        .addEventListener("click", function () {
+          const btn = this;
+          btn.innerHTML =
+            '<i class="fas fa-spinner fa-spin me-2"></i>Loading...';
+          btn.disabled = true;
+
+          // Simulate loading
+          setTimeout(() => {
+            btn.innerHTML =
+              '<i class="fas fa-check me-2"></i>All Projects Loaded';
+            btn.classList.remove("btn-outline-primary");
+            btn.classList.add("btn-success");
+            btn.disabled = true;
+
+            // Show message
+            const alert = document.createElement("div");
+            alert.className =
+              "alert alert-info alert-dismissible fade show mt-3";
+            alert.innerHTML = `
+                    <i class="fas fa-info-circle me-2"></i>
+                    All portfolio items are now displayed. Check back soon for new projects!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+            btn.parentNode.appendChild(alert);
+          }, 1500);
+        });
+    </script>
+  </body>
+</html>

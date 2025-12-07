@@ -1,0 +1,304 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding: 15px 0;
+  }
+
+  .nav-btn {
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .floating-card {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .advantage-item {
+    margin-bottom: 20px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .hero {
+    text-align: center;
+    padding: 100px 0 60px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .hero-buttons .me-3 {
+    margin-right: 0 !important;
+  }
+
+  .hero-stats .col-md-3 {
+    margin-bottom: 20px;
+  }
+
+  .service-card {
+    margin-bottom: 30px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-bottom-links {
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .advantage-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .footer {
+    padding: 60px 0 20px;
+  }
+}
+
+/* Mobile Menu Enhancement */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-hover);
+    margin-top: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--dark-color) !important;
+    margin: 5px 0;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    background: var(--light-color);
+    color: var(--secondary-color) !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .hero-buttons,
+  .scroll-down,
+  .social-links,
+  .footer {
+    display: none !important;
+  }
+
+  body {
+    padding-top: 0;
+  }
+
+  .section-padding {
+    padding: 20px 0;
+  }
+}
+
+/* ===== RESPONSIVE STYLES FOR NEW COMPONENTS ===== */
+
+/* Portfolio Filter Responsive */
+@media (max-width: 768px) {
+  .services-nav-scroll {
+    justify-content: flex-start;
+    padding-bottom: 5px;
+  }
+
+  .service-nav-link {
+    min-width: 100px;
+    padding: 10px 15px;
+  }
+
+  .service-nav-link i {
+    font-size: 20px;
+  }
+
+  .service-nav-link span {
+    font-size: 0.8rem;
+  }
+}
+
+/* Portfolio Grid Responsive */
+@media (max-width: 576px) {
+  .portfolio-item {
+    margin-bottom: 30px;
+  }
+
+  .filter-buttons {
+    gap: 5px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .portfolio-image {
+    height: 200px;
+  }
+}
+
+/* Contact Form Responsive */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 25px;
+  }
+
+  .map-overlay {
+    position: relative;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 20px;
+  }
+}
+
+/* Success Cards Responsive */
+@media (max-width: 992px) {
+  .success-header {
+    flex-wrap: wrap;
+  }
+
+  .success-metrics {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .metric {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+/* Service Detail Cards Responsive */
+@media (max-width: 768px) {
+  .detailed-service-card {
+    padding: 20px;
+  }
+
+  .service-number {
+    font-size: 2rem;
+  }
+}
+
+/* Leadership Section Responsive */
+@media (max-width: 768px) {
+  .leadership-card {
+    padding: 25px;
+  }
+
+  .leader-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .leader-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* FAQ Section Responsive */
+@media (max-width: 768px) {
+  .accordion-button {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .accordion-body {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Modal Responsive */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 10px;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+}
