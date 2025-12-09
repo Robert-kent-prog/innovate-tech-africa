@@ -1541,3 +1541,163 @@ a {
   color: var(--text-light);
   font-size: 0.95rem;
 }
+/* ===== NAVBAR FIXES ===== */
+
+/* Reset conflicting navbar styles */
+.navbar {
+  padding: 0.8rem 0;
+  background: linear-gradient(
+    135deg,
+    var(--dark-color) 0%,
+    var(--primary-color) 100%
+  ) !important;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+  color: var(--white) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--secondary-color) !important;
+}
+
+/* Mobile menu fixes */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--dark-color) !important;
+    margin: 0.25rem 0;
+    padding: 0.75rem 1rem !important;
+    border-radius: 8px;
+    text-align: left;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    background: var(--light-color);
+    color: var(--primary-color) !important;
+  }
+
+  .navbar-nav .btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Fix body padding for mobile */
+  body {
+    padding-top: 70px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 575.98px) {
+  .navbar-brand .fs-5 {
+    font-size: 1rem !important;
+  }
+
+  .navbar-brand small {
+    font-size: 0.7rem !important;
+  }
+
+  .navbar-collapse {
+    padding: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.9rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 375px) {
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand .fs-5 {
+    font-size: 0.9rem !important;
+  }
+
+  .navbar-brand .d-flex.flex-column {
+    display: none !important;
+  }
+
+  .navbar-brand .d-flex.align-items-center::after {
+    content: "ITA";
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--white);
+  }
+}
+
+/* Fix scrolled navbar */
+.navbar.scrolled {
+  padding: 0.5rem 0;
+  background: var(--white) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-brand .fs-5 {
+  color: var(--dark-color);
+}
+
+.navbar.scrolled .navbar-brand small {
+  color: var(--secondary-color);
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navbar.scrolled .nav-link {
+  color: var(--dark-color) !important;
+}
+
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
+  color: var(--primary-color) !important;
+  background: rgba(13, 71, 161, 0.1);
+}
+
+/* Ensure proper z-index */
+.navbar {
+  z-index: 1030;
+}
+
+.navbar-collapse {
+  z-index: 1035;
+}

@@ -2,25 +2,6 @@
 
 A professional portfolio website for Innovate Tech-Africa, a technology and consulting solutions company operating across Africa.
 
-## Project Structure
-
-innovate-tech-africa/
-├── index.html # Homepage
-├── about.html # About Us page
-├── services.html # Services page
-├── portfolio.html # Portfolio/Case Studies
-├── contact.html # Contact page
-├── css/
-│ ├── style.css # Main styles
-│ └── responsive.css # Responsive styles
-├── js/
-│ ├── main.js # Main JavaScript
-│ └── portfolio-filter.js # Portfolio filtering
-├── images/ # Image assets
-└── README.md # This file
-
-text
-
 ## Features
 
 ### 1. **Responsive Design**
@@ -71,15 +52,6 @@ text
 - **Body Text**: Poppins (300-500 weight)
 - **Clean, modern, and highly readable**
 
-## How to Use
-
-1. **Clone the repository**
-2. **Update content** in HTML files with actual client information
-3. **Replace placeholder images** in the images folder
-4. **Update contact information** in footer and contact page
-5. **Customize colors** in `:root` variables in `style.css`
-6. **Deploy** to hosting service (Netlify, Vercel, etc.)
-
 ## Development Notes
 
 - Built with Bootstrap 5.3.0
@@ -124,7 +96,7 @@ This project is for portfolio and educational purposes.
 
 ## Credits
 
-- **Developer**: [Your Name]
+- **Developer**: Robert Muendo
 - **Client**: Innovate Tech-Africa
 - **Icons**: Font Awesome
 - **Images**: Unsplash (replace with actual client images)
