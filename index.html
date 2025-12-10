@@ -36,141 +36,235 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- Add this to fix mobile issues -->
+    <style>
+      /* Critical mobile fixes */
+      @media (max-width: 768px) {
+        /* Fix hero section overflow */
+        .hero {
+          min-height: auto !important;
+          padding: 100px 0 60px !important;
+        }
+
+        .hero .row {
+          margin: 0 !important;
+        }
+
+        /* Fix button overflow */
+        .hero-buttons .btn {
+          width: 100%;
+          margin-bottom: 15px !important;
+          margin-right: 0 !important;
+        }
+
+        /* Fix stat items */
+        .hero-stats .col-6 {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        /* Fix floating card */
+        .floating-card {
+          position: relative !important;
+          bottom: 0 !important;
+          right: 0 !important;
+          margin: 20px auto 0 !important;
+          width: 90% !important;
+        }
+      }
+
+      @media (max-width: 576px) {
+        /* Further mobile optimization */
+        .hero-title {
+          font-size: 1.8rem !important;
+          line-height: 1.3 !important;
+        }
+
+        .hero-subtitle {
+          font-size: 1rem !important;
+        }
+
+        .stat-number {
+          font-size: 1.8rem !important;
+        }
+
+        .stat-label {
+          font-size: 0.8rem !important;
+        }
+
+        /* Fix service cards */
+        .service-card {
+          margin-bottom: 20px;
+        }
+
+        /* Fix advantage items */
+        .advantage-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .advantage-icon {
+          margin: 0 auto 15px !important;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <!-- Navigation - UPDATED to match services.html -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <div class="brand-container">
-            <i class="fas fa-rocket brand-icon"></i>
-            <span class="brand-text">
-              <span class="brand-main">INNOVATE</span>
-              <span class="brand-sub">TECH-AFRICA</span>
-            </span>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <i class="fas fa-rocket text-primary fs-3 me-2"></i>
+          <div class="d-flex flex-column">
+            <span class="fw-bold text-white fs-5">INNOVATE</span>
+            <small class="text-secondary fw-medium" style="font-size: 0.7rem"
+              >TECH-AFRICA</small
+            >
           </div>
         </a>
 
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0 px-2"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          data-bs-target="#mainNavbar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-primary nav-btn" href="contact.html"
-                >Get Quote</a
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center py-3 py-lg-0">
+            <li class="nav-item mx-1">
+              <a class="nav-link px-3 py-2 rounded active" href="index.html"
+                >Home</a
               >
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link px-3 py-2 rounded" href="about.html">About</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link px-3 py-2 rounded" href="services.html"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link px-3 py-2 rounded" href="portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link px-3 py-2 rounded" href="contact.html"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a
+                class="btn btn-primary px-4 py-2 rounded-pill fw-medium"
+                href="contact.html"
+              >
+                <i class="fas fa-paper-plane me-2"></i>Get Quote
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - UPDATED for mobile -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="container">
-        <div class="row align-items-center min-vh-100">
-          <div class="col-lg-7" data-aos="fade-right">
-            <h1 class="hero-title">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-7 col-md-10" data-aos="fade-right">
+            <h1 class="hero-title mb-3">
               Empowering Africa Through
               <span class="highlight">Innovation</span> & Technology
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle mb-4">
               We deliver transformative IT solutions, strategic consulting, and
               leadership development to drive sustainable growth across Africa.
             </p>
-            <div class="hero-buttons mt-4">
-              <a href="services.html" class="btn btn-primary btn-lg me-3">
-                <i class="fas fa-bolt me-2"></i>Our Services
-              </a>
-              <a href="contact.html" class="btn btn-outline-light btn-lg">
-                <i class="fas fa-calendar-check me-2"></i>Consult Now
-              </a>
+            <div class="hero-buttons mb-4">
+              <div class="d-flex flex-wrap gap-2">
+                <a
+                  href="services.html"
+                  class="btn btn-primary btn-lg flex-grow-1"
+                >
+                  <i class="fas fa-bolt me-2"></i>Our Services
+                </a>
+                <a
+                  href="contact.html"
+                  class="btn btn-outline-light btn-lg flex-grow-1"
+                >
+                  <i class="fas fa-calendar-check me-2"></i>Consult Now
+                </a>
+              </div>
             </div>
-            <div class="hero-stats mt-5">
-              <div class="row">
-                <div class="col-md-3 col-6">
-                  <div class="stat-item">
-                    <h3 class="stat-number">100+</h3>
+            <div class="hero-stats mt-4">
+              <div class="row g-2 g-md-3">
+                <div class="col-6 col-md-3">
+                  <div class="stat-item text-center">
+                    <h3 class="stat-number mb-1">100+</h3>
                     <p class="stat-label">Projects</p>
                   </div>
                 </div>
-                <div class="col-md-3 col-6">
-                  <div class="stat-item">
-                    <h3 class="stat-number">50+</h3>
+                <div class="col-6 col-md-3">
+                  <div class="stat-item text-center">
+                    <h3 class="stat-number mb-1">50+</h3>
                     <p class="stat-label">Clients</p>
                   </div>
                 </div>
-                <div class="col-md-3 col-6">
-                  <div class="stat-item">
-                    <h3 class="stat-number">6</h3>
+                <div class="col-6 col-md-3">
+                  <div class="stat-item text-center">
+                    <h3 class="stat-number mb-1">6</h3>
                     <p class="stat-label">Services</p>
                   </div>
                 </div>
-                <div class="col-md-3 col-6">
-                  <div class="stat-item">
-                    <h3 class="stat-number">3+</h3>
+                <div class="col-6 col-md-3">
+                  <div class="stat-item text-center">
+                    <h3 class="stat-number mb-1">3+</h3>
                     <p class="stat-label">Years</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-5" data-aos="fade-left">
-            <div class="hero-image-container">
+          <div class="col-lg-5 col-md-8 mt-5 mt-lg-0" data-aos="fade-left">
+            <div class="hero-image-container position-relative">
               <img
                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                 alt="African Tech Innovation"
-                class="img-fluid hero-image"
+                class="img-fluid hero-image rounded shadow-lg"
               />
-              <div class="floating-card">
+              <div class="floating-card position-absolute d-none d-lg-block">
                 <div class="floating-icon">
                   <i class="fas fa-lightbulb"></i>
                 </div>
-                <h4>Innovation First</h4>
-                <p>Tech-driven solutions for African challenges</p>
+                <h4 class="h5 mb-1">Innovation First</h4>
+                <p class="small mb-0">
+                  Tech-driven solutions for African challenges
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <a href="#services" class="scroll-down">
+      <a href="#services" class="scroll-down d-none d-md-block">
         <i class="fas fa-chevron-down"></i>
       </a>
     </section>
 
-    <!-- Services Preview -->
+    <!-- Services Preview - UPDATED for mobile -->
     <section id="services" class="section-padding">
       <div class="container">
         <div class="section-header text-center mb-5" data-aos="fade-up">
-          <span class="section-subtitle">What We Offer</span>
-          <h2 class="section-title">
+          <span class="section-subtitle d-block mb-2">What We Offer</span>
+          <h2 class="section-title mb-3">
             Our Core <span class="highlight">Services</span>
           </h2>
-          <p class="section-description">
+          <p class="section-description mx-auto">
             Comprehensive solutions tailored for African businesses
           </p>
         </div>
@@ -178,82 +272,118 @@
         <div class="row g-4">
           <!-- Service 1 -->
           <div
-            class="col-md-6 col-lg-4"
+            class="col-12 col-md-6 col-lg-4"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="service-card">
-              <div class="service-icon">
+            <div class="service-card h-100">
+              <div class="service-icon mx-auto">
                 <i class="fas fa-laptop-code"></i>
               </div>
-              <h3 class="service-title">IT Solutions</h3>
-              <p class="service-description">
+              <h3 class="service-title text-center">IT Solutions</h3>
+              <p class="service-description text-center">
                 Web development, software solutions, networking, and digital
                 marketing tailored for your business.
               </p>
               <ul class="service-features">
-                <li><i class="fas fa-check"></i> Web Design & Development</li>
-                <li><i class="fas fa-check"></i> Software Development</li>
-                <li><i class="fas fa-check"></i> Digital Marketing</li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Web Design &
+                  Development
+                </li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Software
+                  Development
+                </li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Digital
+                  Marketing
+                </li>
               </ul>
-              <a href="services.html#it-solutions" class="service-link">
-                Learn More <i class="fas fa-arrow-right"></i>
-              </a>
+              <div class="text-center mt-3">
+                <a href="services.html#it-solutions" class="service-link">
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
 
           <!-- Service 2 -->
           <div
-            class="col-md-6 col-lg-4"
+            class="col-12 col-md-6 col-lg-4"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="service-card">
-              <div class="service-icon">
+            <div class="service-card h-100">
+              <div class="service-icon mx-auto">
                 <i class="fas fa-chart-line"></i>
               </div>
-              <h3 class="service-title">Strategic Consulting</h3>
-              <p class="service-description">
+              <h3 class="service-title text-center">Strategic Consulting</h3>
+              <p class="service-description text-center">
                 Business planning, HR development, and performance management
                 for sustainable growth.
               </p>
               <ul class="service-features">
-                <li><i class="fas fa-check"></i> Strategic Planning</li>
-                <li><i class="fas fa-check"></i> Business Modeling</li>
-                <li><i class="fas fa-check"></i> Performance Management</li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Strategic
+                  Planning
+                </li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Business
+                  Modeling
+                </li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Performance
+                  Management
+                </li>
               </ul>
-              <a href="services.html#strategic-consulting" class="service-link">
-                Learn More <i class="fas fa-arrow-right"></i>
-              </a>
+              <div class="text-center mt-3">
+                <a
+                  href="services.html#strategic-consulting"
+                  class="service-link"
+                >
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
 
           <!-- Service 3 -->
           <div
-            class="col-md-6 col-lg-4"
+            class="col-12 col-md-6 col-lg-4"
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <div class="service-card">
-              <div class="service-icon">
+            <div class="service-card h-100">
+              <div class="service-icon mx-auto">
                 <i class="fas fa-users"></i>
               </div>
-              <h3 class="service-title">Leadership Development</h3>
-              <p class="service-description">
+              <h3 class="service-title text-center">Leadership Development</h3>
+              <p class="service-description text-center">
                 Executive coaching, leadership training, and change management
                 strategies.
               </p>
               <ul class="service-features">
-                <li><i class="fas fa-check"></i> Leadership Coaching</li>
-                <li><i class="fas fa-check"></i> Executive Training</li>
-                <li><i class="fas fa-check"></i> Change Management</li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Leadership
+                  Coaching
+                </li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Executive
+                  Training
+                </li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Change
+                  Management
+                </li>
               </ul>
-              <a
-                href="services.html#leadership-development"
-                class="service-link"
-              >
-                Learn More <i class="fas fa-arrow-right"></i>
-              </a>
+              <div class="text-center mt-3">
+                <a
+                  href="services.html#leadership-development"
+                  class="service-link"
+                >
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -266,75 +396,79 @@
       </div>
     </section>
 
-    <!-- Why Choose Us -->
+    <!-- Why Choose Us - UPDATED for mobile -->
     <section class="section-padding bg-light">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
             <div class="section-header mb-4">
-              <span class="section-subtitle">Our Advantages</span>
+              <span class="section-subtitle d-block mb-2">Our Advantages</span>
               <h2 class="section-title">
                 Why Choose <span class="highlight">Innovate Tech-Africa</span>
               </h2>
             </div>
 
             <div class="advantage-list">
-              <div class="advantage-item">
-                <div class="advantage-icon">
+              <div class="advantage-item d-flex align-items-start mb-4">
+                <div class="advantage-icon flex-shrink-0 me-3">
                   <i class="fas fa-shield-alt"></i>
                 </div>
                 <div class="advantage-content">
-                  <h4>Experienced Team</h4>
-                  <p>
+                  <h4 class="h5 mb-1">Experienced Team</h4>
+                  <p class="mb-0">
                     Multidisciplinary experts with proven track record across
                     Africa
                   </p>
                 </div>
               </div>
 
-              <div class="advantage-item">
-                <div class="advantage-icon">
+              <div class="advantage-item d-flex align-items-start mb-4">
+                <div class="advantage-icon flex-shrink-0 me-3">
                   <i class="fas fa-bolt"></i>
                 </div>
                 <div class="advantage-content">
-                  <h4>Innovation Focus</h4>
-                  <p>
+                  <h4 class="h5 mb-1">Innovation Focus</h4>
+                  <p class="mb-0">
                     Cutting-edge solutions tailored for African market
                     challenges
                   </p>
                 </div>
               </div>
 
-              <div class="advantage-item">
-                <div class="advantage-icon">
+              <div class="advantage-item d-flex align-items-start mb-4">
+                <div class="advantage-icon flex-shrink-0 me-3">
                   <i class="fas fa-handshake"></i>
                 </div>
                 <div class="advantage-content">
-                  <h4>Customer-Centric</h4>
-                  <p>Solutions designed around your specific needs and goals</p>
+                  <h4 class="h5 mb-1">Customer-Centric</h4>
+                  <p class="mb-0">
+                    Solutions designed around your specific needs and goals
+                  </p>
                 </div>
               </div>
 
-              <div class="advantage-item">
-                <div class="advantage-icon">
+              <div class="advantage-item d-flex align-items-start">
+                <div class="advantage-icon flex-shrink-0 me-3">
                   <i class="fas fa-award"></i>
                 </div>
                 <div class="advantage-content">
-                  <h4>Quality Assurance</h4>
-                  <p>Highest standards in delivery and ongoing support</p>
+                  <h4 class="h5 mb-1">Quality Assurance</h4>
+                  <p class="mb-0">
+                    Highest standards in delivery and ongoing support
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-left">
-            <div class="feature-image-container">
+            <div class="feature-image-container position-relative">
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                 alt="Team Collaboration"
-                class="img-fluid rounded"
+                class="img-fluid rounded shadow-lg"
               />
-              <div class="experience-badge">
+              <div class="experience-badge position-absolute d-none d-md-block">
                 <div class="experience-number">5+</div>
                 <div class="experience-text">Years of Excellence</div>
               </div>
@@ -344,11 +478,11 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials - UPDATED for mobile -->
     <section class="section-padding">
       <div class="container">
         <div class="section-header text-center mb-5" data-aos="fade-up">
-          <span class="section-subtitle">Client Stories</span>
+          <span class="section-subtitle d-block mb-2">Client Stories</span>
           <h2 class="section-title">
             What Our <span class="highlight">Clients Say</span>
           </h2>
@@ -356,84 +490,91 @@
 
         <div class="row g-4">
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-card">
-              <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+            <div class="testimonial-card h-100">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
               </div>
-              <p class="testimonial-text">
+              <p class="testimonial-text mb-4">
                 "Innovate Tech-Africa transformed our digital presence. Their
                 web development and digital marketing services increased our
                 online sales by 300%."
               </p>
-              <div class="testimonial-author">
+              <div class="testimonial-author d-flex align-items-center">
                 <img
                   src="https://randomuser.me/api/portraits/men/32.jpg"
                   alt="Client"
-                  class="author-img"
+                  class="author-img rounded-circle me-3"
+                  style="width: 50px; height: 50px"
                 />
                 <div class="author-info">
-                  <h5>David Kioko</h5>
-                  <p>CEO, Nairobi Tech Solutions</p>
+                  <h5 class="mb-0">David Kioko</h5>
+                  <p class="text-muted small mb-0">
+                    CEO, Nairobi Tech Solutions
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-card">
-              <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+            <div class="testimonial-card h-100">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
               </div>
-              <p class="testimonial-text">
+              <p class="testimonial-text mb-4">
                 "The leadership development program reshaped our management
                 approach. Our team is more cohesive and productive than ever
                 before."
               </p>
-              <div class="testimonial-author">
+              <div class="testimonial-author d-flex align-items-center">
                 <img
                   src="https://randomuser.me/api/portraits/women/44.jpg"
                   alt="Client"
-                  class="author-img"
+                  class="author-img rounded-circle me-3"
+                  style="width: 50px; height: 50px"
                 />
                 <div class="author-info">
-                  <h5>Sarah Omondi</h5>
-                  <p>Director, Kenya Commercial Bank</p>
+                  <h5 class="mb-0">Sarah Omondi</h5>
+                  <p class="text-muted small mb-0">
+                    Director, Kenya Commercial Bank
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial-card">
-              <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+            <div class="testimonial-card h-100">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
               </div>
-              <p class="testimonial-text">
+              <p class="testimonial-text mb-4">
                 "Their strategic consulting helped us expand across three new
                 African markets. Exceptional understanding of local business
                 landscapes."
               </p>
-              <div class="testimonial-author">
+              <div class="testimonial-author d-flex align-items-center">
                 <img
                   src="https://randomuser.me/api/portraits/men/65.jpg"
                   alt="Client"
-                  class="author-img"
+                  class="author-img rounded-circle me-3"
+                  style="width: 50px; height: 50px"
                 />
                 <div class="author-info">
-                  <h5>James Mwanzia</h5>
-                  <p>Founder, AgroTech Africa</p>
+                  <h5 class="mb-0">James Mwanzia</h5>
+                  <p class="text-muted small mb-0">Founder, AgroTech Africa</p>
                 </div>
               </div>
             </div>
@@ -442,158 +583,204 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- CTA Section - UPDATED for mobile -->
+    <section class="cta-section py-5">
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-8" data-aos="zoom-in">
-            <h2 class="cta-title">Ready to Transform Your Business?</h2>
-            <p class="cta-text">
+            <h2 class="cta-title mb-3">Ready to Transform Your Business?</h2>
+            <p class="cta-text mb-4">
               Let's build innovative solutions together for Africa's digital
               future
             </p>
-            <div class="cta-buttons mt-4">
-              <a href="contact.html" class="btn btn-light btn-lg me-3">
-                <i class="fas fa-phone me-2"></i>Contact Us
-              </a>
-              <a href="portfolio.html" class="btn btn-outline-light btn-lg">
-                <i class="fas fa-briefcase me-2"></i>View Portfolio
-              </a>
+            <div class="cta-buttons">
+              <div
+                class="d-flex flex-column flex-md-row justify-content-center gap-3"
+              >
+                <a href="contact.html" class="btn btn-light btn-lg">
+                  <i class="fas fa-phone me-2"></i>Contact Us
+                </a>
+                <a href="portfolio.html" class="btn btn-outline-light btn-lg">
+                  <i class="fas fa-briefcase me-2"></i>View Portfolio
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer - UPDATED for mobile -->
+    <footer class="footer py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="footer-brand mb-3">
-              <i class="fas fa-rocket brand-icon"></i>
-              <span class="brand-text">
-                <span class="brand-main">INNOVATE</span>
-                <span class="brand-sub">TECH-AFRICA</span>
-              </span>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-brand d-flex align-items-center mb-3">
+              <i class="fas fa-rocket text-primary fs-3 me-2"></i>
+              <div class="d-flex flex-column">
+                <span class="fw-bold text-white fs-5">INNOVATE</span>
+                <small class="text-secondary" style="font-size: 0.7rem"
+                  >TECH-AFRICA</small
+                >
+              </div>
             </div>
-            <p class="footer-text">
+            <p class="footer-text mb-4">
               Empowering African businesses with innovative technology solutions
               and strategic consulting for sustainable growth.
             </p>
-            <div class="social-links mt-4">
-              <a href="#" class="social-link"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-instagram"></i
-              ></a>
+            <div class="social-links d-flex gap-3">
+              <a
+                href="#"
+                class="social-link d-flex align-items-center justify-content-center"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link d-flex align-items-center justify-content-center"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link d-flex align-items-center justify-content-center"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link d-flex align-items-center justify-content-center"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-            <h5 class="footer-title">Quick Links</h5>
-            <ul class="footer-links">
-              <li>
-                <a href="index.html"
-                  ><i class="fas fa-chevron-right"></i> Home</a
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title mb-3">Quick Links</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="index.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="about.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="services.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Services</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="portfolio.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Portfolio</a
                 >
               </li>
               <li>
-                <a href="about.html"
-                  ><i class="fas fa-chevron-right"></i> About Us</a
-                >
-              </li>
-              <li>
-                <a href="services.html"
-                  ><i class="fas fa-chevron-right"></i> Services</a
-                >
-              </li>
-              <li>
-                <a href="portfolio.html"
-                  ><i class="fas fa-chevron-right"></i> Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="contact.html"
-                  ><i class="fas fa-chevron-right"></i> Contact</a
+                <a
+                  href="contact.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Contact</a
                 >
               </li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-            <h5 class="footer-title">Our Services</h5>
-            <ul class="footer-links">
-              <li>
-                <a href="services.html#it-solutions"
-                  ><i class="fas fa-chevron-right"></i> IT Solutions</a
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title mb-3">Our Services</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="services.html#it-solutions"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>IT
+                  Solutions</a
                 >
               </li>
-              <li>
-                <a href="services.html#strategic-consulting"
-                  ><i class="fas fa-chevron-right"></i> Strategic Consulting</a
+              <li class="mb-2">
+                <a
+                  href="services.html#strategic-consulting"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Strategic
+                  Consulting</a
                 >
               </li>
-              <li>
-                <a href="services.html#leadership-development"
-                  ><i class="fas fa-chevron-right"></i> Leadership
+              <li class="mb-2">
+                <a
+                  href="services.html#leadership-development"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Leadership
                   Development</a
                 >
               </li>
-              <li>
-                <a href="services.html#skills-training"
-                  ><i class="fas fa-chevron-right"></i> Skills Training</a
+              <li class="mb-2">
+                <a
+                  href="services.html#skills-training"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Skills
+                  Training</a
                 >
               </li>
               <li>
-                <a href="services.html#innovation"
-                  ><i class="fas fa-chevron-right"></i> Innovation Solutions</a
+                <a
+                  href="services.html#innovation"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Innovation
+                  Solutions</a
                 >
               </li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-4">
-            <h5 class="footer-title">Contact Info</h5>
-            <ul class="footer-contact">
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title mb-3">Contact Info</h5>
+            <ul class="footer-contact list-unstyled">
+              <li class="mb-3 d-flex align-items-start">
+                <i class="fas fa-map-marker-alt text-primary me-2 mt-1"></i>
                 <span>Nairobi, Kenya</span>
               </li>
-              <li>
-                <i class="fas fa-phone"></i>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="fas fa-phone text-primary me-2"></i>
                 <span>+254 700 123 456</span>
               </li>
-              <li>
-                <i class="fas fa-envelope"></i>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="fas fa-envelope text-primary me-2"></i>
                 <span>info@innovatetechafrica.com</span>
               </li>
-              <li>
-                <i class="fas fa-clock"></i>
+              <li class="d-flex align-items-center">
+                <i class="fas fa-clock text-primary me-2"></i>
                 <span>Mon - Fri: 8:00 - 17:00</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <hr class="footer-divider" />
+        <hr class="footer-divider my-4" />
 
         <div class="row align-items-center">
-          <div class="col-md-6">
-            <p class="copyright">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="copyright mb-0">
               &copy; 2025 Innovate Tech-Africa. All Rights Reserved.
             </p>
           </div>
           <div class="col-md-6">
-            <div class="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Sitemap</a>
+            <div
+              class="footer-bottom-links d-flex flex-wrap justify-content-md-end gap-3"
+            >
+              <a href="#" class="text-decoration-none">Privacy Policy</a>
+              <a href="#" class="text-decoration-none">Terms of Service</a>
+              <a href="#" class="text-decoration-none">Sitemap</a>
             </div>
           </div>
         </div>
@@ -615,6 +802,23 @@
         duration: 800,
         offset: 100,
         once: true,
+        disable: "mobile", // Disable animations on mobile for better performance
+      });
+
+      // Fix for mobile navbar
+      document.addEventListener("DOMContentLoaded", function () {
+        // Close mobile menu when clicking a link
+        document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+          link.addEventListener("click", function () {
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            if (navbarCollapse.classList.contains("show")) {
+              const bsCollapse =
+                bootstrap.Collapse.getInstance(navbarCollapse) ||
+                new bootstrap.Collapse(navbarCollapse);
+              bsCollapse.hide();
+            }
+          });
+        });
       });
     </script>
   </body>

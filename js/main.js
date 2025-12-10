@@ -137,41 +137,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const statNumbers = document.querySelectorAll(".stat-number");
   let animated = false;
 
-  function animateStats() {
-    if (animated || !isElementInViewport(document.querySelector(".hero-stats")))
-      return;
+  // Only initialize if stats exist
+  if (statNumbers.length > 0) {
+    function animateStats() {
+      const heroStats = document.querySelector(".hero-stats");
+      if (!heroStats || animated || !isElementInViewport(heroStats)) return;
 
-    animated = true;
-    statNumbers.forEach((stat) => {
-      const target = parseInt(stat.textContent);
-      let current = 0;
-      const increment = target / 50;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          stat.textContent = target + "+";
-          clearInterval(timer);
-        } else {
-          stat.textContent = Math.floor(current) + "+";
-        }
-      }, 30);
-    });
+      animated = true;
+      statNumbers.forEach((stat) => {
+        const target = parseInt(stat.textContent);
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            stat.textContent = target + "+";
+            clearInterval(timer);
+          } else {
+            stat.textContent = Math.floor(current) + "+";
+          }
+        }, 30);
+      });
+    }
+
+    function isElementInViewport(el) {
+      if (!el) return false;
+
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
+    }
+
+    window.addEventListener("scroll", animateStats);
+
+    // Initialize stats animation on load if already in viewport
+    animateStats();
   }
-
-  // Check if element is in viewport
-  function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.bottom >= 0
-    );
-  }
-
-  window.addEventListener("scroll", animateStats);
-
-  // Initialize stats animation on load if already in viewport
-  animateStats();
 
   // Lazy Loading Images
   const lazyImages = document.querySelectorAll("img[data-src]");
