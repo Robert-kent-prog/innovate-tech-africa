@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (isValid) {
-        // Show success message
         const submitBtn = this.querySelector('[type="submit"]');
         const originalText = submitBtn.innerHTML;
 
