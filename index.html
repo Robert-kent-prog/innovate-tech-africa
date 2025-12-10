@@ -112,59 +112,48 @@
   </head>
   <body>
     <!-- Navigation - UPDATED to match services.html -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <i class="fas fa-rocket text-primary fs-3 me-2"></i>
-          <div class="d-flex flex-column">
-            <span class="fw-bold text-white fs-5">INNOVATE</span>
-            <small class="text-secondary fw-medium" style="font-size: 0.7rem"
-              >TECH-AFRICA</small
-            >
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-container">
+            <i class="fas fa-rocket brand-icon"></i>
+            <span class="brand-text">
+              <span class="brand-main">INNOVATE</span>
+              <span class="brand-sub">TECH-AFRICA</span>
+            </span>
           </div>
         </a>
 
         <button
-          class="navbar-toggler border-0 px-2"
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
+          data-bs-target="#navbarNav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto align-items-lg-center py-3 py-lg-0">
-            <li class="nav-item mx-1">
-              <a class="nav-link px-3 py-2 rounded active" href="index.html"
-                >Home</a
-              >
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item mx-1">
-              <a class="nav-link px-3 py-2 rounded" href="about.html">About</a>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item mx-1">
-              <a class="nav-link px-3 py-2 rounded" href="services.html"
-                >Services</a
-              >
+            <li class="nav-item">
+              <a class="nav-link active" href="services.html">Services</a>
             </li>
-            <li class="nav-item mx-1">
-              <a class="nav-link px-3 py-2 rounded" href="portfolio.html"
-                >Portfolio</a
-              >
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
             </li>
-            <li class="nav-item mx-1">
-              <a class="nav-link px-3 py-2 rounded" href="contact.html"
-                >Contact</a
-              >
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <a
-                class="btn btn-primary px-4 py-2 rounded-pill fw-medium"
-                href="contact.html"
+            <li class="nav-item">
+              <a class="btn btn-primary nav-btn" href="contact.html"
+                >Get Quote</a
               >
-                <i class="fas fa-paper-plane me-2"></i>Get Quote
-              </a>
             </li>
           </ul>
         </div>
