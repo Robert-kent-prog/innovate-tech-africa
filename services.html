@@ -36,6 +36,200 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- Additional CSS for image sections -->
+    <style>
+      .service-image-section {
+        margin: 3rem 0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .service-image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .service-image-card {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        height: 280px; /* Increased height to accommodate text */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .service-image-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-image-container {
+        height: 180px;
+        overflow: hidden;
+      }
+
+      .service-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .service-image-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .service-image-content {
+        padding: 1.2rem;
+        background: white;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .service-image-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+      }
+
+      .service-image-desc {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.4;
+      }
+
+      .image-section-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .image-section-header h3 {
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        font-size: 1.8rem;
+      }
+
+      .image-section-header p {
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
+
+      /* Alternative version with overlay text always visible */
+      .service-image-card-alt {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        height: 250px;
+      }
+
+      .service-image-card-alt:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-image-card-alt img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .service-image-card-alt:hover img {
+        transform: scale(1.05);
+      }
+
+      .service-image-overlay-alt {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.4)
+        );
+        color: white;
+        padding: 1.5rem 1rem 1rem;
+      }
+
+      .service-image-title-alt {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        color: white;
+      }
+
+      .service-image-desc-alt {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .service-image-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1.2rem;
+        }
+
+        .service-image-card {
+          height: 260px;
+        }
+
+        .service-image-container {
+          height: 160px;
+        }
+
+        .service-image-content {
+          padding: 1rem;
+        }
+
+        .service-image-card-alt {
+          height: 220px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .service-image-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .service-image-card {
+          height: 250px;
+        }
+
+        .service-image-container {
+          height: 150px;
+        }
+
+        .service-image-card-alt {
+          height: 220px;
+        }
+
+        .image-section-header h3 {
+          font-size: 1.5rem;
+        }
+
+        .image-section-header p {
+          font-size: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -300,6 +494,87 @@
                 <li>Inventory Management</li>
                 <li>Sales Analytics</li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- IT Solutions Image Section -->
+        <div class="service-image-section" data-aos="fade-up">
+          <div class="image-section-header">
+            <h3>Our IT Solutions in Action</h3>
+            <p>
+              Visual showcase of our comprehensive technology services and
+              implementations
+            </p>
+          </div>
+          <div class="service-image-grid">
+            <!-- Using card style with text below image -->
+            <div class="service-image-card">
+              <div class="service-image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Web Development Projects"
+                />
+              </div>
+              <div class="service-image-content">
+                <div>
+                  <div class="service-image-title">Web Development</div>
+                  <div class="service-image-desc">
+                    Modern responsive websites and applications
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-image-card">
+              <div class="service-image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Software Development"
+                />
+              </div>
+              <div class="service-image-content">
+                <div>
+                  <div class="service-image-title">Software Solutions</div>
+                  <div class="service-image-desc">
+                    Custom business applications & systems
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-image-card">
+              <div class="service-image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Network Setup"
+                />
+              </div>
+              <div class="service-image-content">
+                <div>
+                  <div class="service-image-title">Networking Services</div>
+                  <div class="service-image-desc">
+                    Infrastructure setup & optimization
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-image-card">
+              <div class="service-image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Digital Marketing"
+                />
+              </div>
+              <div class="service-image-content">
+                <div>
+                  <div class="service-image-title">Digital Marketing</div>
+                  <div class="service-image-desc">
+                    Online promotion & brand strategies
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -596,6 +871,71 @@
                 <li>Innovation Workshops</li>
                 <li>Strategic Alignment</li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Training Image Section -->
+        <div class="service-image-section" data-aos="fade-up">
+          <div class="image-section-header">
+            <h3>Our Training Programs</h3>
+            <p>
+              Visual documentation of our skills development and training
+              sessions
+            </p>
+          </div>
+          <div class="service-image-grid">
+            <!-- Using overlay style with text always visible -->
+            <div class="service-image-card-alt">
+              <img src="/images/computer2.jpeg" alt="ICT Skills Training" />
+              <div class="service-image-overlay-alt">
+                <div class="service-image-title-alt">
+                  ICT Skills Development
+                </div>
+                <div class="service-image-desc-alt">
+                  Hands-on technical training sessions
+                </div>
+              </div>
+            </div>
+
+            <div class="service-image-card-alt">
+              <img src="/images/conference.jpeg" alt="Soft Skills Training" />
+              <div class="service-image-overlay-alt">
+                <div class="service-image-title-alt">
+                  Soft Skills Development
+                </div>
+                <div class="service-image-desc-alt">
+                  Communication & teamwork workshops
+                </div>
+              </div>
+            </div>
+
+            <div class="service-image-card-alt">
+              <img
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Entrepreneurship Training"
+              />
+              <div class="service-image-overlay-alt">
+                <div class="service-image-title-alt">
+                  Entrepreneurship Training
+                </div>
+                <div class="service-image-desc-alt">
+                  Business skills development programs
+                </div>
+              </div>
+            </div>
+
+            <div class="service-image-card-alt">
+              <img
+                src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Workshop Sessions"
+              />
+              <div class="service-image-overlay-alt">
+                <div class="service-image-title-alt">Capacity Building</div>
+                <div class="service-image-desc-alt">
+                  Interactive training workshops
+                </div>
+              </div>
             </div>
           </div>
         </div>
