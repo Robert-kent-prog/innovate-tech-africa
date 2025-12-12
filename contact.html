@@ -36,9 +36,108 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- Add this to fix mobile issues -->
+    <style>
+      /* Critical mobile fixes */
+      @media (max-width: 768px) {
+        /* Fix page header */
+        .page-header {
+          padding: 100px 0 40px !important;
+        }
+
+        .page-title {
+          font-size: 2rem !important;
+        }
+
+        .page-subtitle {
+          font-size: 1rem !important;
+        }
+
+        /* Fix contact cards */
+        .contact-card {
+          margin-bottom: 25px;
+        }
+
+        .contact-details h5 {
+          font-size: 1.1rem !important;
+        }
+
+        /* Fix form */
+        .contact-form {
+          padding: 25px !important;
+        }
+
+        .form-group {
+          margin-bottom: 1rem !important;
+        }
+
+        /* Fix map overlay */
+        .map-overlay {
+          position: relative !important;
+          top: 0 !important;
+          right: 0 !important;
+          margin: 20px !important;
+          max-width: 100% !important;
+        }
+
+        /* Fix CTA buttons */
+        .cta-buttons .btn {
+          width: 100%;
+          margin-bottom: 15px !important;
+          margin-right: 0 !important;
+        }
+
+        /* Fix business hours */
+        .hour-item {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 576px) {
+        /* Further mobile optimization */
+        .page-title {
+          font-size: 1.8rem !important;
+        }
+
+        .section-title {
+          font-size: 1.5rem !important;
+        }
+
+        /* Fix contact icons */
+        .contact-icon {
+          width: 70px !important;
+          height: 70px !important;
+          font-size: 28px !important;
+        }
+
+        /* Fix form spacing */
+        .form-control,
+        .form-select {
+          padding: 10px 12px !important;
+        }
+
+        /* Fix emergency contact */
+        .emergency-contact {
+          padding: 12px !important;
+        }
+
+        /* Fix FAQ accordion */
+        .accordion-button {
+          padding: 15px !important;
+          font-size: 0.95rem !important;
+        }
+
+        .accordion-body {
+          padding: 15px !important;
+          font-size: 0.9rem !important;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- Navigation - UPDATED to match index.html -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -69,16 +168,16 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
+              <a class="nav-link active" href="services.html">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary nav-btn" href="#contact-form"
+              <a class="btn btn-primary nav-btn" href="contact.html"
                 >Get Quote</a
               >
             </li>
@@ -87,154 +186,924 @@
       </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Page Header - UPDATED for mobile -->
+    <section class="page-header py-5">
       <div class="container">
         <div class="row justify-content-center text-center">
-          <div class="col-lg-8">
-            <h1 class="page-title">Contact us is still under Development</h1>
+          <div class="col-lg-8 col-md-10">
+            <h1 class="page-title mb-3">Contact Us</h1>
+            <p class="page-subtitle mb-4">
+              Let's discuss how we can help transform your business with
+              innovative solutions
+            </p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                  <a href="index.html" class="text-decoration-none">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Contact
+                </li>
+              </ol>
+            </nav>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Contact Information - UPDATED for mobile -->
+    <section class="contact-info section-padding">
+      <div class="container">
+        <div class="row g-4">
+          <div
+            class="col-12 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="contact-card h-100">
+              <div class="contact-icon mx-auto mb-4">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3 class="text-center mb-4">Our Locations</h3>
+              <div class="contact-details">
+                <div class="text-center mb-4">
+                  <h5 class="h6 text-primary mb-2">Headquarters - Nairobi</h5>
+                  <p class="mb-0">
+                    Innovation Center, Westlands<br />Nairobi, Kenya
+                  </p>
+                </div>
+
+                <div class="text-center mb-4">
+                  <h5 class="h6 text-primary mb-2">
+                    Regional Office - Kampala
+                  </h5>
+                  <p class="mb-0">
+                    Business Hub, Nakasero<br />Kampala, Uganda
+                  </p>
+                </div>
+
+                <div class="text-center">
+                  <h5 class="h6 text-primary mb-2">
+                    West Africa Office - Lagos
+                  </h5>
+                  <p class="mb-0">
+                    Tech Park, Victoria Island<br />Lagos, Nigeria
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="contact-card h-100">
+              <div class="contact-icon mx-auto mb-4">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h3 class="text-center mb-4">Contact Details</h3>
+              <div class="contact-details">
+                <div class="contact-item d-flex align-items-start mb-4">
+                  <i class="fas fa-phone-alt text-primary mt-1 me-3"></i>
+                  <div>
+                    <h5 class="h6 text-primary mb-2">Phone Numbers</h5>
+                    <p class="mb-1 small">Kenya: +254 700 123 456</p>
+                    <p class="mb-1 small">Uganda: +256 700 123 456</p>
+                    <p class="mb-0 small">Nigeria: +234 700 123 4567</p>
+                  </div>
+                </div>
+
+                <div class="contact-item d-flex align-items-start">
+                  <i class="fas fa-envelope text-primary mt-1 me-3"></i>
+                  <div>
+                    <h5 class="h6 text-primary mb-2">Email Addresses</h5>
+                    <p class="mb-1 small">
+                      General: info@innovatetechafrica.com
+                    </p>
+                    <p class="mb-1 small">
+                      Support: support@innovatetechafrica.com
+                    </p>
+                    <p class="mb-0 small">
+                      Careers: careers@innovatetechafrica.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="contact-card h-100">
+              <div class="contact-icon mx-auto mb-4">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3 class="text-center mb-4">Business Hours</h3>
+              <div class="contact-details">
+                <div class="business-hours mb-4">
+                  <div
+                    class="hour-item d-flex justify-content-between align-items-center py-2 border-bottom"
+                  >
+                    <span class="fw-medium">Monday - Friday</span>
+                    <span class="text-muted">8:00 AM - 5:00 PM</span>
+                  </div>
+                  <div
+                    class="hour-item d-flex justify-content-between align-items-center py-2 border-bottom"
+                  >
+                    <span class="fw-medium">Saturday</span>
+                    <span class="text-muted">9:00 AM - 1:00 PM</span>
+                  </div>
+                  <div
+                    class="hour-item d-flex justify-content-between align-items-center py-2"
+                  >
+                    <span class="fw-medium">Sunday</span>
+                    <span class="text-muted">Closed</span>
+                  </div>
+                </div>
+
+                <div class="emergency-contact bg-light p-4 rounded text-center">
+                  <h5 class="h6 text-primary mb-2">Emergency Support</h5>
+                  <p class="small mb-2">
+                    Available 24/7 for critical system issues
+                  </p>
+                  <p class="h5 mb-0 text-primary">+254 711 123 456</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form - UPDATED for mobile -->
+    <section
+      id="contact-form"
+      class="contact-form-section section-padding bg-light"
+    >
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="footer-brand mb-3">
-              <i class="fas fa-rocket brand-icon"></i>
-              <span class="brand-text">
-                <span class="brand-main">INNOVATE</span>
-                <span class="brand-sub">TECH-AFRICA</span>
-              </span>
+          <div class="col-lg-10 mx-auto">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+              <span class="section-subtitle d-block mb-2">Get In Touch</span>
+              <h2 class="section-title mb-3">
+                Send Us a <span class="highlight">Message</span>
+              </h2>
+              <p class="section-description mx-auto">
+                Fill out the form below and we'll get back to you within 24
+                hours
+              </p>
             </div>
-            <p class="footer-text">
+
+            <form
+              id="contactForm"
+              class="contact-form"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="row g-3 g-md-4">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label for="name" class="form-label fw-medium"
+                      >Full Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="name"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter your full name.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label for="email" class="form-label fw-medium"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      id="email"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label for="phone" class="form-label fw-medium"
+                      >Phone Number *</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control form-control-lg"
+                      id="phone"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter your phone number.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label for="company" class="form-label fw-medium"
+                      >Company/Organization</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="company"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="service" class="form-label fw-medium"
+                      >Service Interest *</label
+                    >
+                    <select
+                      class="form-select form-select-lg"
+                      id="service"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Select a service
+                      </option>
+                      <option value="it-solutions">
+                        Information Technology Solutions
+                      </option>
+                      <option value="strategic-consulting">
+                        Strategic Management Consulting
+                      </option>
+                      <option value="leadership-development">
+                        Leadership Development
+                      </option>
+                      <option value="skills-training">
+                        Skills Development & Training
+                      </option>
+                      <option value="partnerships">
+                        Partnership Development
+                      </option>
+                      <option value="innovation">Innovation Solutions</option>
+                      <option value="career-development">
+                        Career Development & Youth Programs
+                      </option>
+                      <option value="multiple">Multiple Services</option>
+                      <option value="other">Other (Specify in message)</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a service of interest.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="message" class="form-label fw-medium"
+                      >Project Details/Message *</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="5"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">
+                      Please enter your message.
+                    </div>
+                    <div class="form-text mt-2">
+                      Please provide as much detail as possible about your
+                      project or inquiry.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="newsletter"
+                      />
+                      <label class="form-check-label" for="newsletter">
+                        Subscribe to our newsletter for updates and insights
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="terms"
+                        required
+                      />
+                      <label class="form-check-label" for="terms">
+                        I agree to the
+                        <a
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#termsModal"
+                          class="text-decoration-none"
+                          >Terms & Conditions</a
+                        >
+                        and
+                        <a
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#privacyModal"
+                          class="text-decoration-none"
+                          >Privacy Policy</a
+                        >
+                        *
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree to the terms and conditions.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg px-5 py-3"
+                  >
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section - UPDATED for mobile -->
+    <section class="map-section">
+      <div class="container-fluid px-0">
+        <div class="row g-0">
+          <div class="col-12">
+            <div class="map-container position-relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.854348320172!2d36.81721437494239!3d-1.265786635619252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1737c3e6bb91%3A0x5f5e13e5e7f8b0a0!2sWestlands%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1641234567890!5m2!1sen!2ske"
+                width="100%"
+                height="400"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="map-overlay position-absolute d-none d-md-block">
+                <div class="map-info bg-white p-3 rounded shadow">
+                  <h5 class="mb-2">
+                    <i class="fas fa-map-marker-alt text-primary me-2"></i>Our
+                    Headquarters
+                  </h5>
+                  <p class="mb-1 small">Innovation Center, Westlands</p>
+                  <p class="mb-2 small">Nairobi, Kenya</p>
+                  <a
+                    href="https://maps.google.com/?q=Westlands,Nairobi,Kenya"
+                    target="_blank"
+                    class="btn btn-sm btn-primary"
+                  >
+                    <i class="fas fa-directions me-1"></i>Get Directions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section - UPDATED for mobile -->
+    <section class="faq-section section-padding">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-subtitle d-block mb-2">Common Questions</span>
+          <h2 class="section-title mb-3">
+            Frequently Asked <span class="highlight">Questions</span>
+          </h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion" id="faqAccordion">
+              <div
+                class="accordion-item"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    What is your typical project timeline?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Project timelines vary based on complexity. Web development
+                    projects typically take 4-12 weeks, strategic consulting
+                    engagements 8-24 weeks, and training programs 2-8 weeks. We
+                    provide detailed timelines after initial consultation.
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    Do you work with clients outside Africa?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes, we work with international clients who want to
+                    establish or expand operations in Africa. Our expertise in
+                    African markets provides valuable insights for global
+                    companies entering the continent.
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    What is your pricing structure?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    We offer flexible pricing: fixed-price for well-defined
+                    projects, time & materials for ongoing work, and retainer
+                    agreements for long-term partnerships. All pricing is
+                    transparent with detailed proposals before starting.
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    Do you provide post-project support?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes, all our projects include 3-6 months of
+                    post-implementation support. We also offer ongoing
+                    maintenance contracts, training sessions, and 24/7 emergency
+                    support for critical systems.
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                  >
+                    How do you ensure data security?
+                  </button>
+                </h2>
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    We implement enterprise-grade security measures including
+                    SSL encryption, regular security audits, GDPR compliance,
+                    and secure hosting on AWS/Azure with data backup solutions.
+                    We sign NDAs and follow strict data protection protocols.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+              <p class="mb-0">
+                Have more questions?
+                <a
+                  href="#contact-form"
+                  class="text-primary text-decoration-none fw-medium"
+                  >Contact us directly</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA - UPDATED for mobile -->
+    <section class="cta-section py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8" data-aos="zoom-in">
+            <h2 class="cta-title mb-3">
+              Ready to Start Your Digital Transformation?
+            </h2>
+            <p class="cta-text mb-4">
+              Schedule a free consultation with our experts today
+            </p>
+            <div class="cta-buttons">
+              <div
+                class="d-flex flex-column flex-md-row justify-content-center gap-3"
+              >
+                <a href="#contact-form" class="btn btn-light btn-lg">
+                  <i class="fas fa-calendar-alt me-2"></i>Book Consultation
+                </a>
+                <a
+                  href="tel:+254700123456"
+                  class="btn btn-outline-light btn-lg"
+                >
+                  <i class="fas fa-phone me-2"></i>Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - UPDATED to match index.html -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-brand d-flex align-items-center mb-3">
+              <i class="fas fa-rocket text-primary fs-3 me-2"></i>
+              <div class="d-flex flex-column">
+                <span class="fw-bold text-white fs-5">INNOVATE</span>
+                <small class="text-secondary" style="font-size: 0.7rem"
+                  >TECH-AFRICA</small
+                >
+              </div>
+            </div>
+            <p class="footer-text mb-4">
               Empowering African businesses with innovative technology solutions
               and strategic consulting for sustainable growth.
             </p>
-            <div class="social-links mt-4">
-              <a href="#" class="social-link"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="social-link"
-                ><i class="fab fa-instagram"></i
-              ></a>
+            <div class="social-links d-flex gap-3">
+              <a
+                href="#"
+                class="social-link d-flex align-items-center justify-content-center"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link d-flex align-items-center justify-content-center"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link d-flex align-items-center justify-content-center"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link d-flex align-items-center justify-content-center"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-            <h5 class="footer-title">Quick Links</h5>
-            <ul class="footer-links">
-              <li>
-                <a href="index.html"
-                  ><i class="fas fa-chevron-right"></i> Home</a
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title mb-3">Quick Links</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="index.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="about.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="services.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Services</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="portfolio.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Portfolio</a
                 >
               </li>
               <li>
-                <a href="about.html"
-                  ><i class="fas fa-chevron-right"></i> About Us</a
-                >
-              </li>
-              <li>
-                <a href="services.html"
-                  ><i class="fas fa-chevron-right"></i> Services</a
-                >
-              </li>
-              <li>
-                <a href="portfolio.html"
-                  ><i class="fas fa-chevron-right"></i> Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="contact.html"
-                  ><i class="fas fa-chevron-right"></i> Contact</a
+                <a
+                  href="contact.html"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Contact</a
                 >
               </li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-            <h5 class="footer-title">Our Services</h5>
-            <ul class="footer-links">
-              <li>
-                <a href="services.html#it-solutions"
-                  ><i class="fas fa-chevron-right"></i> IT Solutions</a
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title mb-3">Our Services</h5>
+            <ul class="footer-links list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="services.html#it-solutions"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>IT
+                  Solutions</a
                 >
               </li>
-              <li>
-                <a href="services.html#strategic-consulting"
-                  ><i class="fas fa-chevron-right"></i> Strategic Consulting</a
+              <li class="mb-2">
+                <a
+                  href="services.html#strategic-consulting"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Strategic
+                  Consulting</a
                 >
               </li>
-              <li>
-                <a href="services.html#leadership-development"
-                  ><i class="fas fa-chevron-right"></i> Leadership
+              <li class="mb-2">
+                <a
+                  href="services.html#leadership-development"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Leadership
                   Development</a
                 >
               </li>
-              <li>
-                <a href="services.html#skills-training"
-                  ><i class="fas fa-chevron-right"></i> Skills Training</a
+              <li class="mb-2">
+                <a
+                  href="services.html#skills-training"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Skills
+                  Training</a
                 >
               </li>
               <li>
-                <a href="services.html#innovation"
-                  ><i class="fas fa-chevron-right"></i> Innovation Solutions</a
+                <a
+                  href="services.html#innovation"
+                  class="text-decoration-none d-flex align-items-center"
+                  ><i class="fas fa-chevron-right me-2 small"></i>Innovation
+                  Solutions</a
                 >
               </li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-4">
-            <h5 class="footer-title">Contact Info</h5>
-            <ul class="footer-contact">
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title mb-3">Contact Info</h5>
+            <ul class="footer-contact list-unstyled">
+              <li class="mb-3 d-flex align-items-start">
+                <i class="fas fa-map-marker-alt text-primary me-2 mt-1"></i>
                 <span>Nairobi, Kenya</span>
               </li>
-              <li>
-                <i class="fas fa-phone"></i>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="fas fa-phone text-primary me-2"></i>
                 <span>+254 700 123 456</span>
               </li>
-              <li>
-                <i class="fas fa-envelope"></i>
+              <li class="mb-3 d-flex align-items-center">
+                <i class="fas fa-envelope text-primary me-2"></i>
                 <span>info@innovatetechafrica.com</span>
               </li>
-              <li>
-                <i class="fas fa-clock"></i>
+              <li class="d-flex align-items-center">
+                <i class="fas fa-clock text-primary me-2"></i>
                 <span>Mon - Fri: 8:00 - 17:00</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <hr class="footer-divider" />
+        <hr class="footer-divider my-4" />
 
         <div class="row align-items-center">
-          <div class="col-md-6">
-            <p class="copyright">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="copyright mb-0">
               &copy; 2025 Innovate Tech-Africa. All Rights Reserved.
             </p>
           </div>
           <div class="col-md-6">
-            <div class="footer-bottom-links">
-              <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal"
+            <div
+              class="footer-bottom-links d-flex flex-wrap justify-content-md-end gap-3"
+            >
+              <a
+                href="#"
+                class="text-decoration-none"
+                data-bs-toggle="modal"
+                data-bs-target="#privacyModal"
                 >Privacy Policy</a
               >
-              <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal"
+              <a
+                href="#"
+                class="text-decoration-none"
+                data-bs-toggle="modal"
+                data-bs-target="#termsModal"
                 >Terms of Service</a
               >
+              <a href="#" class="text-decoration-none">Sitemap</a>
             </div>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Terms & Conditions</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>1. Acceptance of Terms</h6>
+            <p>
+              By accessing and using Innovate Tech-Africa's services, you agree
+              to be bound by these terms and conditions.
+            </p>
+
+            <h6 class="mt-4">2. Services Agreement</h6>
+            <p>
+              All services are provided based on written proposals and
+              agreements. Scope, timeline, and pricing will be detailed in
+              project proposals.
+            </p>
+
+            <h6 class="mt-4">3. Intellectual Property</h6>
+            <p>
+              All intellectual property rights for developed solutions transfer
+              to the client upon full payment, unless otherwise specified in
+              writing.
+            </p>
+
+            <h6 class="mt-4">4. Payment Terms</h6>
+            <p>
+              Standard payment terms: 50% upfront, 25% at milestone, 25% upon
+              completion. Late payments may incur additional charges.
+            </p>
+
+            <h6 class="mt-4">5. Confidentiality</h6>
+            <p>
+              Both parties agree to maintain confidentiality of proprietary
+              information exchanged during the project.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Privacy Policy</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>1. Data Collection</h6>
+            <p>
+              We collect necessary information for service delivery, including
+              contact details, project requirements, and payment information.
+            </p>
+
+            <h6 class="mt-4">2. Data Usage</h6>
+            <p>
+              Your data is used solely for project execution, communication, and
+              service improvement. We never sell your data to third parties.
+            </p>
+
+            <h6 class="mt-4">3. Data Protection</h6>
+            <p>
+              We implement industry-standard security measures to protect your
+              data from unauthorized access or disclosure.
+            </p>
+
+            <h6 class="mt-4">4. Your Rights</h6>
+            <p>
+              You have the right to access, correct, or delete your personal
+              information. Contact us for data-related requests.
+            </p>
+
+            <h6 class="mt-4">5. Cookies</h6>
+            <p>
+              Our website uses cookies to improve user experience. You can
+              control cookie settings through your browser.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -251,69 +1120,86 @@
         duration: 800,
         offset: 100,
         once: true,
+        disable: "mobile", // Disable animations on mobile for better performance
       });
 
-      // Contact Form Processing
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+      // Fix for mobile navbar
+      document.addEventListener("DOMContentLoaded", function () {
+        // Close mobile menu when clicking a link
+        document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+          link.addEventListener("click", function () {
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            if (navbarCollapse.classList.contains("show")) {
+              const bsCollapse =
+                bootstrap.Collapse.getInstance(navbarCollapse) ||
+                new bootstrap.Collapse(navbarCollapse);
+              bsCollapse.hide();
+            }
+          });
+        });
 
-          // Get form data
-          const formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            company: document.getElementById("company").value,
-            service: document.getElementById("service").value,
-            message: document.getElementById("message").value,
-            newsletter: document.getElementById("newsletter").checked,
-          };
+        // Contact Form Processing
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
 
-          // Show loading state
-          const submitBtn = this.querySelector('[type="submit"]');
-          const originalText = submitBtn.innerHTML;
-          submitBtn.innerHTML =
-            '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-          submitBtn.disabled = true;
+            // Get form data
+            const formData = {
+              name: document.getElementById("name").value,
+              email: document.getElementById("email").value,
+              phone: document.getElementById("phone").value,
+              company: document.getElementById("company").value,
+              service: document.getElementById("service").value,
+              message: document.getElementById("message").value,
+              newsletter: document.getElementById("newsletter").checked,
+            };
 
-          // Simulate API call (replace with actual API endpoint)
-          setTimeout(() => {
-            // Show success message
-            const alert = document.createElement("div");
-            alert.className =
-              "alert alert-success alert-dismissible fade show mt-3";
-            alert.innerHTML = `
+            // Show loading state
+            const submitBtn = this.querySelector('[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML =
+              '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate API call (replace with actual API endpoint)
+            setTimeout(() => {
+              // Show success message
+              const alert = document.createElement("div");
+              alert.className =
+                "alert alert-success alert-dismissible fade show mt-3";
+              alert.innerHTML = `
                     <i class="fas fa-check-circle me-2"></i>
                     Thank you for your message! We have received your inquiry and will contact you within 24 hours.
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 `;
-            this.parentNode.insertBefore(alert, this.nextSibling);
+              this.parentNode.insertBefore(alert, this.nextSibling);
 
-            // Reset form
-            this.reset();
+              // Reset form
+              this.reset();
 
-            // Restore button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
+              // Restore button
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
 
-            // Scroll to success message
-            alert.scrollIntoView({ behavior: "smooth" });
+              // Scroll to success message
+              alert.scrollIntoView({ behavior: "smooth" });
 
-            // Auto-hide alert after 10 seconds
-            setTimeout(() => {
-              const bsAlert = new bootstrap.Alert(alert);
-              bsAlert.close();
-            }, 10000);
-          }, 2000);
-        });
+              // Auto-hide alert after 10 seconds
+              setTimeout(() => {
+                const bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+              }, 10000);
+            }, 2000);
+          });
 
-      // Pre-fill service from URL parameter
-      const urlParams = new URLSearchParams(window.location.search);
-      const serviceParam = urlParams.get("service");
-      if (serviceParam && document.getElementById("service")) {
-        document.getElementById("service").value = serviceParam;
-      }
+        // Pre-fill service from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceParam = urlParams.get("service");
+        if (serviceParam && document.getElementById("service")) {
+          document.getElementById("service").value = serviceParam;
+        }
+      });
     </script>
   </body>
 </html>
