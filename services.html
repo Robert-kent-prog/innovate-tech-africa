@@ -1447,7 +1447,8 @@
         <div class="row align-items-center">
           <div class="col-md-6 mb-3 mb-md-0">
             <p class="copyright mb-0">
-              &copy; 2025 Innovate Tech-Africa. All Rights Reserved.<br />
+              &copy; <span class="auto-year">2025</span> Innovate Tech-Africa.
+              All Rights Reserved.<br />
               <small>Based in Nairobi, Kenya</small>
             </p>
           </div>
@@ -1621,6 +1622,13 @@
 
       // Services Navigation
       document.addEventListener("DOMContentLoaded", function () {
+        const currentYear = new Date().getFullYear();
+
+        // Update copyright year in all elements with class "auto-year"
+        const yearElements = document.querySelectorAll(".auto-year");
+        yearElements.forEach((element) => {
+          element.textContent = currentYear;
+        });
         const serviceLinks = document.querySelectorAll(".service-nav-link");
         const serviceSections = document.querySelectorAll(
           ".service-detail-section"
