@@ -134,6 +134,48 @@
           font-size: 0.9rem !important;
         }
       }
+      /* Fix 1: Ensure CTA section has proper stacking */
+      .cta-section {
+        position: relative;
+        /* DO NOT ADD background here - keep original */
+      }
+
+      /* Fix 2: Make all content inside clickable */
+      .cta-section .container,
+      .cta-section .row,
+      .cta-section .col-lg-8 {
+        position: relative;
+        z-index: 10;
+      }
+
+      /* Fix 3: Ensure buttons are on top layer */
+      .cta-buttons .btn,
+      .hero-buttons .btn,
+      .contact-form .btn {
+        position: relative !important;
+        z-index: 100 !important;
+        pointer-events: auto !important;
+      }
+
+      /* Fix 4: Remove any overlay that might be blocking */
+      .cta-section::before,
+      .cta-section::after {
+        pointer-events: none !important;
+      }
+
+      /* Fix 5: Ensure no parent is blocking clicks */
+      .cta-buttons,
+      .cta-buttons .d-flex {
+        position: relative;
+        z-index: 20;
+      }
+
+      /* Fix 6: Phone button specific fix */
+      a[href^="tel:"] {
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -1348,6 +1390,57 @@
         if (serviceParam && document.getElementById("service")) {
           document.getElementById("service").value = serviceParam;
         }
+      });
+      // MINIMAL FIX - ONLY FIX CLICKABILITY
+      document.addEventListener("DOMContentLoaded", function () {
+        // Simply ensure all buttons are clickable
+        const allButtons = document.querySelectorAll(".btn, a[href]");
+        allButtons.forEach((element) => {
+          // Remove any problematic styles
+          element.style.pointerEvents = "auto";
+          element.style.cursor = "pointer";
+
+          // Ensure it's not visually disabled
+          element.classList.remove("disabled");
+          element.removeAttribute("disabled");
+        });
+
+        // Specifically fix CTA buttons
+        const ctaButtons = document.querySelectorAll(".cta-buttons .btn");
+        ctaButtons.forEach((btn) => {
+          btn.style.zIndex = "100";
+          btn.style.position = "relative";
+        });
+
+        // Remove any element covering the buttons
+        setTimeout(() => {
+          const checkCoverage = () => {
+            const buttons = document.querySelectorAll(".cta-buttons .btn");
+            buttons.forEach((btn) => {
+              const rect = btn.getBoundingClientRect();
+              const centerX = rect.left + rect.width / 2;
+              const centerY = rect.top + rect.height / 2;
+
+              // Check what element is at the button's center
+              const topElement = document.elementFromPoint(centerX, centerY);
+
+              if (
+                topElement &&
+                topElement !== btn &&
+                !btn.contains(topElement)
+              ) {
+                // If something else is on top, make it not intercept clicks
+                topElement.style.pointerEvents = "none";
+                console.log(
+                  "Fixed coverage for button:",
+                  btn.textContent.trim()
+                );
+              }
+            });
+          };
+
+          checkCoverage();
+        }, 100);
       });
     </script>
   </body>
